@@ -1,3 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body {
+  background-color: #010208;
+  font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+}
+
+p, ul, li, h1, h2, h3, h4, h5, h6{
+  color: #fff;
+  list-style: none;
+}
+
+li:hover
+{
+  color: #BC3CD8;
+}
+
+/* Home */
+
+.home {
+  width: 1440px;
+  height: 800px;
+}
+
+.home-content{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 104px;
+  gap: 10px;
+  
+  position: absolute;
+  height: 168px;
+  left: 112px;
+  right: 112px;
+  top: 316px;
+}
+
+.home-intro {
+  color: rgba(227, 228, 230, 0.55);
+  font-size: 56px;
+  line-height: 150%;
+  text-align: center;
+}
+
+
+/* Navbar & header */
+
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 10%;
+}
+
+.navbar li {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.navbar-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+
+.navbar-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-item a, a:visited, a:hover:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Projects */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 80px 110px 120px;
+  gap: 97px;
+  width: 1440px;
+  height: 1800px;
+}
+
+.projects-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+}
+
+.projects h2 {
+  font-weight: 600;
+  font-size: 40px;  
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(227, 228, 230, 0.55);
+}
+
+.projects h2 > span{
+  color: white;
+  font-weight: 600;
+  font-size: 40px;  
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+
+  width: 1220px;
+  height: 490px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+}
+
+.card-column{
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 1px;
+
+  width: 594px;
+  height: 418px;
+}
+
+.card-column h2{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.project-type {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.card-column p {
+  font-weight: 300;
+  font-size: 24px;
+  color: rgba(227, 228, 230, 0.55);
+}
+
+#card-0 {
+  display: flex;
+  align-self: flex-start;
+  text-align: start;
+}
+
+#card-1 {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: start;
+
+  
+}
+
+#card-2 {
+  display: flex;
+  text-align: start;
+}
+
+.card-img {
+  left: 0%;
+  right: 51.31%;
+  top: 0%;
+  bottom: 0%;
+  border-radius: 16px;
+  width: 800px;
+  height: 500px;
+}
+
+.projects-buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.card-column a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #010208;
+  color: #fff;
+
+  width: 163px;
+  height: 40px;
+
+  /* Neutral 2 */
+
+  border: 1px solid rgba(227, 228, 230, 0.55);
+  border-radius: 100px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* About Me */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 74px 107px;
+  gap: 30px;
+
+  width: 1080px;
+  height: 800px;
+
+  background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 34px;
+
+  width: 1226px;
+  height: 848px;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.white-text {
+  color: white;
+  font-weight: 200;
+}
+
+.about-content {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 596px;
+  height: 292px;
+
+  text-align: start;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.about-content p {
+  width: 596px;
+  height: 240px;
+  
+  font-size: 32px;
+  line-height: 150%;
+  /* or 48px */
+  
+  
+  /* Neutral 2 */
+  
+  color: rgba(227, 228, 230, 0.55);
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.about-horizontal img {
+  width: 282px;
+  height: 408px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  border-radius: 16px;
+}
+
+.about-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 32px;
+}
+
+.about-vertical img {
+  width: 282px;
+  height: 408px;
+  border-radius: 16px;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  gap: 20px;
+}
+
+.cta-button {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+#in-logo {
+  width: 100px;
+}
+
+#gmail-logo {
+  width: 30px;
+}
+
+.footer-sign {
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+
 .App {
   text-align: center;
 }
@@ -11,21 +390,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {

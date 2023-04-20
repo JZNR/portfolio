@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Calendar and Note-taking Web App",
+        "description": "Simplify is a Calendar and simple note-taking app for personal use. It was built using MongoDB, Express, React, Node and the Fullcalendar npm package.\nThe main reason to create Simplify Calendar, was to create a Calendar and Note-taking App with a simple to use UI.",
+        "type": "Web App",
+        "img": "https://res.cloudinary.com/duuwrswcs/image/upload/v1682007423/projects/Captura_de_Tela_2023-04-20_a%CC%80s_17.09.49_otxms0.png",
+        "url": "https://simplify-calendar.netlify.app/login",
+        "repo": "https://github.com/JZNR/simplify-front-end"
+    },{
+        "name": "Football Web App",
+        "description": "The goal was to develop a Football Website/App to check the latest news, scores and standings. Iron-Sports was created using technologies such as MongoDB, Express.js, Node.js, Handlebars, HTML, CSS, Bootstrap, JavaScript, npm packages and Third-Party APIS.",
+        "type": "Web App",
+        "img": "https://res.cloudinary.com/duuwrswcs/image/upload/v1681983291/projects/Captura_de_Tela_2023-04-20_a%CC%80s_08.43.51_mwrwyn.png",
+        "url": "https://iron-sports.cyclic.app/",
+        "repo": "https://github.com/miligarcia048/iron-sports"
+    }, {
+        "name": "Pac-Man Clone",
+        "description": "The main goal of the project was to replicate the original Pac-Man game using HTML, CSS, JavaScript and Canvas.",
+        "type": "Web Game",
+        "img": "https://res.cloudinary.com/duuwrswcs/image/upload/v1681983290/projects/Captura_de_Tela_2023-04-20_a%CC%80s_08.42.12_tffai2.png",
+        "url": "https://pacman-clone.netlify.app/",
+        "repo": "https://github.com/JZNR/Pac-Man"
+    }
+]
