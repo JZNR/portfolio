@@ -30,7 +30,6 @@ li:hover
   padding: 0px 104px;
   gap: 10px;
   
-  position: absolute;
   height: 168px;
   left: 112px;
   right: 112px;
@@ -95,10 +94,11 @@ li:hover
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 80px 110px 120px;
-  gap: 97px;
-  width: 1440px;
-  height: 1800px;
+  padding: 80px 20px 120px;
+  gap: 50px;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
 }
 
 .projects-header {
@@ -111,7 +111,7 @@ li:hover
 
 .projects h2 {
   font-weight: 600;
-  font-size: 40px;  
+  font-size: 30px;
   line-height: 150%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -121,29 +121,20 @@ li:hover
 .projects h2 > span{
   color: white;
   font-weight: 600;
-  font-size: 40px;  
+  font-size: 30px;
   line-height: 150%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 32px;
-
-  width: 1220px;
-  height: 490px;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
+  gap: 20px;
+  width: 100%;
+  height: auto;
 }
 
 .card-column{
@@ -151,9 +142,8 @@ flex-grow: 0;
   flex-direction: column;
   padding: 0px;
   gap: 1px;
-
-  width: 594px;
-  height: 418px;
+  width: 100%;
+  height: auto;
 }
 
 .card-column h2{
@@ -172,7 +162,7 @@ flex-grow: 0;
 
 .card-column p {
   font-weight: 300;
-  font-size: 24px;
+  font-size: 18px;
   color: rgba(227, 228, 230, 0.55);
 }
 
@@ -184,10 +174,8 @@ flex-grow: 0;
 
 #card-1 {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   text-align: start;
-
-  
 }
 
 #card-2 {
@@ -201,8 +189,8 @@ flex-grow: 0;
   top: 0%;
   bottom: 0%;
   border-radius: 16px;
-  width: 800px;
-  height: 500px;
+  width: 100%;
+  height: auto;
 }
 
 .projects-buttons{
@@ -222,20 +210,10 @@ flex-grow: 0;
   font-family: 'Quicksand', sans-serif;
   background-color: #010208;
   color: #fff;
-
-  width: 163px;
-  height: 40px;
-
-  /* Neutral 2 */
-
+  width: 100%;
+  height: auto;
   border: 1px solid rgba(227, 228, 230, 0.55);
   border-radius: 100px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
 /* About Me */
@@ -377,26 +355,169 @@ flex-grow: 0;
   letter-spacing: -0.01em;
 }
 
-.App {
-  text-align: center;
-}
+/* Media Queries */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media only screen and (max-width: 600px) {
+  
+  .home {
+    width: 100%;
+    height: auto;
+  }
+  
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20%;
+    gap: 10px;
+    height: auto;
+    width: 60%;
+    top: 100px;
+  }
+  
+  .home-intro {
+    font-size: 36px;
+    text-align: center;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 10%;
+    margin-top: 40px;
+  }
+
+  .navbar li {
+    display: block;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .navbar-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+  }
+
+  .navbar-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .navbar-item a, a:visited, a:hover:active {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .projects {
+    padding: 40px 30px;
+    gap: 50px;
+    width: 60%;
+    height: auto;
+  }
+
+  .projects-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 50px;
+  }
+
+  .projects h2 {
+    font-size: 28px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .card-column {
+    width: 100%;
+    height: auto;
+    gap: 10px;
+  }
+
+  .card-column h2 {
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+
+  .card-column p {
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  .card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .card-column a {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 12px 0;
+    border-radius: 50px;
+  }
+
+  .projects-buttons {
+    justify-content: center;
+  }
+
+  .about {
+    flex-direction: row;
+    gap: 34px;
+    height: auto;
+    background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
+  }
+
+  .about-wrapper {
+    flex-direction: row;
+    align-items:baseline;
+    width: 100%;
+    height: auto;
+  }
+
+  .about-content {
+    display: flex;
+    justify-content: left;
+    width: 50%;
+    text-align: left;
+  }
+
+  .about-horizontal img,
+  .about-vertical img {
+    display: none;
   }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
