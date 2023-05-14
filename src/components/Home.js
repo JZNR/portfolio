@@ -5,9 +5,11 @@ function Home() {
   return (
     <>
     <section className='home' id='home'>
-        <Navbar/>
         <div className='home-content'>
-            <p className='home-intro'>Hi &#128075;, I'm a Full-Stack developer based in Lisbon, Portugal.</p>
+        <Navbar/>
+            <div className='intro-container'>
+              <p className='home-intro'>Hi &#128075;, I'm a Full-Stack developer based in Lisbon, Portugal.</p>
+            </div>
         </div>
     </section>
     </>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
-body {
+html, body {
   background-color: #010208;
   font-family: 'Quicksand', sans-serif;
   overflow-x: hidden;
@@ -96,7 +96,6 @@ li:hover
   align-items: flex-start;
   padding: 80px 20px 120px;
   gap: 50px;
-  max-width: 600px;
   width: 100%;
   height: auto;
 }
@@ -357,171 +356,75 @@ li:hover
 
 /* Media Queries */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 595px) {
 
-  .App {
-    overflow: hidden
+  html, body {
+    max-height: 100vh;
   }
-  
   .home {
-    width: 100%;
-    height: auto;
-  }
-  
-  .home-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 20%;
-    gap: 10px;
-    height: auto;
-    width: 60%;
-    top: 100px;
+    height: 50vh;
   }
   
+  .home-content { 
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .intro-container {
+    width: 100vw;
+    height: 100vh;
+  }
+
   .home-intro {
-    font-size: 36px;
-    text-align: center;
-  }
-
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 0 10%;
-    margin-top: 40px;
-  }
-
-  .navbar li {
-    display: block;
-    position: relative;
-    font-size: 20px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .navbar-item::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform-origin: bottom right;
-    transition: transform 0.35s ease-out;
-  }
-
-  .navbar-item:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
-  .navbar-item a, a:visited, a:hover:active {
-    text-decoration: none;
-    color: inherit;
+    font-size: 40px;
+    padding: 1em 1em;
   }
 
   .projects {
-    padding: 40px 30px;
-    gap: 50px;
-    width: 60%;
-    height: auto;
-  }
-
-  .projects-header {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding-bottom: 50px;
-  }
-
-  .projects h2 {
-    font-size: 28px;
-    line-height: 120%;
-    text-align: center;
-    letter-spacing: 0.02em;
-  }
-
-  .card {
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    height: auto;
-  }
-
-  .card-column {
-    width: 100%;
-    height: auto;
-    gap: 10px;
-  }
-
-  .card-column h2 {
-    font-size: 20px;
-    line-height: 120%;
-    text-align: center;
-    letter-spacing: 0.02em;
+    width: 80%;
   }
 
   .card-column p {
-    font-size: 18px;
-    line-height: 130%;
-    text-align: center;
-  }
-
-  .card-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-
-  .card-column a {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    justify-content: center;
-    font-size: 16px;
-    padding: 12px 0;
-    border-radius: 50px;
-  }
-
-  .projects-buttons {
-    justify-content: center;
+    font-size: 22px;
   }
 
   .about {
-    flex-direction: row;
-    gap: 34px;
-    height: auto;
-    background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
+    padding: 0px 0px;
+    margin: 5em 1em;
+    height: 65vh;
+    width: 85vw;
   }
 
   .about-wrapper {
-    flex-direction: row;
-    align-items:baseline;
-    width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .about-content {
-    display: flex;
-    justify-content: left;
-    width: 50%;
-    text-align: left;
+    height: 100%;
   }
 
-  .about-horizontal img,
-  .about-vertical img {
-    display: none;
+  .about-content p {
+    width: 85vw;
+    height: auto;
   }
+
+  .about img {
+    display: none;
+  }  
+
 }
 
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 889px) {
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
