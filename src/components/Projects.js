@@ -17,17 +17,17 @@ function Projects() {
   return (
     <>
     <div className="projects" id='projects'>
-      <div className='projects-header'>
+      <div>
         <h2>Selected <span>Projects</span></h2>
       </div>
         { projects.map((project, id) => {
           return <div className='card' key={id} id={`card-${id}`}>
-              <div>
+              <div className='card-img-wrapper'>
                   <img src={project.img} alt="" className='card-img'/>
               </div>
               <div className='card-column'>
                   <h2 className='project-name'>{project.name}</h2>
-                  {whiteText(project, id)}
+                  <div className='project-description-wrapper'>{whiteText(project, id)}</div>
                   <h4 className='project-type'>{project.type}</h4>
                   <div className="projects-buttons">
                     <a href={project.repo} target="_blank" rel="noopener noreferrer">

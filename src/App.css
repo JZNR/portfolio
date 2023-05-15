@@ -19,21 +19,14 @@ li:hover
 /* Home */
 
 .home {
-  width: 1440px;
-  height: 800px;
+  width: auto;
+  height: 50vh;
 }
 
 .home-content{
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px 104px;
-  gap: 10px;
-  
-  height: 168px;
-  left: 112px;
-  right: 112px;
-  top: 316px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home-intro {
@@ -41,6 +34,7 @@ li:hover
   font-size: 56px;
   line-height: 150%;
   text-align: center;
+  margin-top: 3em;
 }
 
 
@@ -96,16 +90,8 @@ li:hover
   align-items: flex-start;
   padding: 80px 20px 120px;
   gap: 50px;
-  width: 100%;
+  width: auto;
   height: auto;
-}
-
-.projects-header {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 10px;
 }
 
 .projects h2 {
@@ -128,12 +114,9 @@ li:hover
 
 .card {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 20px;
-  width: 100%;
-  height: auto;
+  flex-direction: row;
+  gap: 3%;
+  margin-top: 5%;
 }
 
 .card-column{
@@ -141,7 +124,6 @@ li:hover
   flex-direction: column;
   padding: 0px;
   gap: 1px;
-  width: 100%;
   height: auto;
 }
 
@@ -161,8 +143,17 @@ li:hover
 
 .card-column p {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 22px;
   color: rgba(227, 228, 230, 0.55);
+}
+
+.project-description-wrapper{
+  width: 50%;
+}
+
+.card-img-wrapper{
+  width: 100%;
+  height: 100%;
 }
 
 #card-0 {
@@ -172,9 +163,11 @@ li:hover
 }
 
 #card-1 {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
+  flex-direction: row-reverse;
+}
+
+#card-1 > .card-column {
+  align-items: center;
 }
 
 #card-2 {
@@ -183,10 +176,6 @@ li:hover
 }
 
 .card-img {
-  left: 0%;
-  right: 51.31%;
-  top: 0%;
-  bottom: 0%;
   border-radius: 16px;
   width: 100%;
   height: auto;
@@ -195,7 +184,8 @@ li:hover
 .projects-buttons{
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  width: 60%;
+  gap: 3%;
 }
 
 .card-column a {
@@ -223,6 +213,7 @@ li:hover
   align-items: center;
   padding: 74px 107px;
   gap: 30px;
+  margin-bottom: 5%;
 
   width: 1080px;
   height: 800px;
@@ -381,10 +372,20 @@ li:hover
   .home-intro {
     font-size: 40px;
     padding: 1em 1em;
+    margin-top: 2%;
   }
 
   .projects {
     width: 80%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #card-1 {
+    flex-direction: column;
   }
 
   .card-column p {
@@ -393,9 +394,9 @@ li:hover
 
   .about {
     padding: 0px 0px;
-    margin: 5em 1em;
-    height: 65vh;
-    width: 85vw;
+    margin: 0 2% 15% 2%;
+    height: 45vh;
+    width: 100vw;
   }
 
   .about-wrapper {
@@ -407,13 +408,18 @@ li:hover
   }
 
   .about-content p {
-    width: 85vw;
-    height: auto;
+    width: 30%;
+    font-size: 22px;
   }
 
   .about img {
     display: none;
   }  
+
+  .projects-buttons{
+    width: 100%;
+    gap: 3%;
+  }
 
 }
 
