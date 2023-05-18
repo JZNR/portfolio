@@ -379,6 +379,10 @@ li:hover
     width: 80%;
   }
 
+.project-description-wrapper{
+  width: 100%;
+}
+
   .card {
     display: flex;
     flex-direction: column;
